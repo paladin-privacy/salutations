@@ -4,7 +4,7 @@ import { randomNumber } from './random';
 import { Gender, Settings, defaultSettings } from './models';
 
 function getModifiers(settings: Settings): string[] {
-  let modifiers: string[] = [ ...data.nobleModifiers.all ];
+  let modifiers: string[] = [...data.nobleModifiers.all];
   if (settings.gender === Gender.FEMALE) {
     modifiers = [...modifiers, ...data.nobleModifiers.female];
   } else if (settings.gender === Gender.MALE) {
@@ -38,7 +38,13 @@ function processVariables(str: string, vars: { [k: string]: string }) {
     console.log(str, vars);
     return '';
   }
-  return _.trim(_.reduce(vars, (r: string, v: string, k: string) => r.replace(new RegExp(`\{${k}\}`), v), str));
+  return _.trim(
+    _.reduce(
+      vars,
+      (r: string, v: string, k: string) => r.replace(new RegExp(`\{${k}\}`), v),
+      str
+    )
+  );
 }
 
 function randomItem(arr: string[]): string {
@@ -64,9 +70,16 @@ export function generate(userSettings: Partial<Settings>): string {
 
   // Select random values
   const name = settings.name || randomItem(names);
-  const modifier = maybe(processVariables(randomItem(modifiers), { name }), 0.5);
+  const modifier = maybe(
+    processVariables(randomItem(modifiers), { name }),
+    0.5
+  );
   const title = processVariables(randomItem(titles), { name, modifier });
-  const greeting = processVariables(randomItem(greetings), { name, modifier, title });
+  const greeting = processVariables(randomItem(greetings), {
+    name,
+    modifier,
+    title,
+  });
 
   // Combine
   return capitalizeFirst(greeting);

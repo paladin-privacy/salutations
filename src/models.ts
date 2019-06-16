@@ -1,18 +1,17 @@
-
 export enum Gender {
   FEMALE = 'female',
   MALE = 'male',
-  OTHER = 'other'
-};
+  OTHER = 'other',
+}
 
 export interface Settings {
-  noble: boolean,
-  gender: Gender,
-  name: string | null
+  noble: boolean;
+  gender: Gender;
+  name: string | null;
 }
 
 export const defaultSettings: Settings = {
   noble: false,
   gender: Gender.OTHER,
-  name: null
+  name: null,
 };
