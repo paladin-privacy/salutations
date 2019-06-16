@@ -1,0 +1,27 @@
+{
+  "name": "@paladin-privacy/salutations",
+  "version": "1.0.0",
+  "description": "Cheery greetings",
+  "main": "dist/index.js",
+  "scripts": {
+    "greetings": "ts-node ./scripts/greetings.ts",
+    "test": "jest --coverage",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "typescript": "^3.5.2",
+    "yargs": "^13.2.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.14",
+    "@types/lodash": "^4.14.134",
+    "@types/node": "^12.0.8",
+    "@types/yargs": "^13.0.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0"
+  }
+}
