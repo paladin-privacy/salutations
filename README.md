@@ -53,7 +53,7 @@ Greetings, consul!
 ## JavaScript / Typescript API
 
 ```ts
-import { generate, Gender } from '@paladin-privacy/salutations';
+import { generate, Gender } from '@portable-profiles/salutations';
 
 const greeting = generate({
   name: 'Alice',
