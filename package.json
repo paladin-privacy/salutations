@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paladin-privacy/salutations.git"
+    "url": "git+https://github.com/portable-profiles/salutations.git"
   },
   "bugs": {
-    "url": "https://github.com/paladin-privacy/salutations/issues"
+    "url": "https://github.com/portable-profiles/salutations/issues"
   },
-  "homepage": "https://github.com/paladin-privacy/salutations#readme",
+  "homepage": "https://github.com/portable-profiles/salutations#readme",
   "devDependencies": {
     "@types/jest": "^24.0.14",
     "@types/lodash": "^4.14.134",
